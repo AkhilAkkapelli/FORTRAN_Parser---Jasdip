@@ -1,6 +1,7 @@
 1. Python version  - Python 3.7.3
 
 2. Install requirements - 
+   sudo apt install python3.7
    pip install -r pythonrequirements.txt
    sudo apt-get install texlive-latex-base
 
