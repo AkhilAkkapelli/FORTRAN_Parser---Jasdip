@@ -1,0 +1,3959 @@
+\documentclass{report}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage[T1]{fontenc}
+
+\title{\bfseries Symbol Table - \textit{LPSolver\_st}}
+
+\begin{document}
+
+\maketitle\pagebreak
+
+\renewcommand{\arraystretch}{1.5}
+\addtolength{\textwidth}{3cm}
+
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : }  \textbf{\textit{global}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+testLPSolver & Main &  &  &  &  & <ast.Main object at 0x14b57f4d2fd0> \\\hline
+
+ProbabilityDistribution & Module &  &  &  &  & <ast.Module object at 0x14b57f2e7250> \\\hline
+
+ProbabilityGeneration & Module &  &  &  &  & <ast.Module object at 0x14b57f2e7450> \\\hline
+
+LPPGeneration & Module &  &  &  &  & <ast.Module object at 0x14b57f2bcb10> \\\hline
+
+LinearProblemSolver & Module &  &  &  &  & <ast.Module object at 0x14b57f3b9810> \\\hline
+
+Algorithm & Module &  &  &  &  & <ast.Module object at 0x14b57f3a0990> \\\hline
+
+Statistics & Module &  &  &  &  & <ast.Module object at 0x14b57f3b4d90> \\\hline
+
+HistogramPlot & Module &  &  &  &  & <ast.Module object at 0x14b57f3ea390> \\\hline
+
+Postprocessor & Module &  &  &  &  & <ast.Module object at 0x14b57f406410> \\\hline
+
+LPTools & Module &  &  &  &  & <ast.Module object at 0x14b57f3f4610> \\\hline
+
+LAOperators & Module &  &  &  &  & <ast.Module object at 0x14b57f3ff890> \\\hline
+
+LAPACKOperators & Module &  &  &  &  & <ast.Module object at 0x14b57f1ec290> \\\hline
+
+Augment & Module &  &  &  &  & <ast.Module object at 0x14b57f1f37d0> \\\hline
+
+GeoGebra & Module &  &  &  &  & <ast.Module object at 0x14b57f209550> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{testLPSolver - }Main}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbabilityDistribution - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+UniformDist & Function &  &  &  & result(u) & <ast.Function object at 0x14b57f3ac050> \\\hline
+
+NormalDist & Function &  &  &  & result(n) & <ast.Function object at 0x14b57f2bc310> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{UniformDist - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f2e7cd0> \\\hline
+
+IA & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x14b57f2e7610> \\\hline
+
+IM & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x14b57f2e7610> \\\hline
+
+IQ & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x14b57f2e7610> \\\hline
+
+IR & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x14b57f2e7610> \\\hline
+
+am & Scalar & 16 & real &  & ['save'] & <ast.Declaration object at 0x14b57f2e7390> \\\hline
+
+ix & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x14b57f3ac0d0> \\\hline
+
+iy & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x14b57f3ac0d0> \\\hline
+
+k & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x14b57f3ac0d0> \\\hline
+
+u & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f2e7110> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{NormalDist - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3aced0> \\\hline
+
+PI & Scalar & 16 & real &  & ['parameter'] & <ast.Declaration object at 0x14b57f3ac690> \\\hline
+
+u1 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3ac950> \\\hline
+
+u2 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3ac950> \\\hline
+
+n & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3acad0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbabilityGeneration - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+ProbVecGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3ad050> \\\hline
+
+ProbMatGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3adb50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbVecGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f2bcd90> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f2bcf90> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f2bcf90> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f2bce50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbMatGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3ad390> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3ad9d0> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3ad9d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3adad0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3adad0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPPGeneration - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+LPPGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3b9410> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPPGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3b9710> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b9710> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b9710> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3b9890> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3b9890> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b9990> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b9990> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LinearProblemSolver - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+CanonicalForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3b9f90> \\\hline
+
+EqualityForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3c75d0> \\\hline
+
+StandardForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3b6610> \\\hline
+
+LeastNegativeForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3ce2d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{CanonicalForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3c73d0> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3c73d0> \\\hline
+
+x\_opt & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3c73d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3c72d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3c72d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EqualityForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_eq & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+b\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+c\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+A\_can1 & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+c\_can1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x\_can1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x01 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+x\_opt1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+lambda & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3b6490> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b63d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b63d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{StandardForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+x\_opt & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+a0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3aff90> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3afc90> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3afc90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LeastNegativeForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_ln & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+b\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+c\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+y0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+A\_aug & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+b\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+c\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x0\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+A\_augcan & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+c\_augcan & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x\_augcan & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3a7d50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+opt & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+greater & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+num & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+feas & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+fail & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+ini\_feas & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3a0950> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Algorithm - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+ProjectiveMethod & Function &  &  &  & result(x\_can) & <ast.Function object at 0x14b57f3b4f50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProjectiveMethod - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3a0c50> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3a0c50> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b4150> \\\hline
+
+x\_p & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+f\_p & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+f & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+x0\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+x\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3b4a10> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+iter & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+iter\_limit & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+iter\_num & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+iterz & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3b4e50> \\\hline
+
+Optimize & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3cc850> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Optimize - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x\_p & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3cc3d0> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3cc550> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+Ad & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+B & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+c\_p & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+c\_unit & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3ba650> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Statistics - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+arithmetic\_vector & Function &  &  &  & result(amean) & <ast.Function object at 0x14b57f3ba8d0> \\\hline
+
+arithmetic\_matrix & Function &  &  &  & result(amean) & <ast.Function object at 0x14b57f3e3110> \\\hline
+
+geometric\_vector & Function &  &  &  & result(gmean) & <ast.Function object at 0x14b57f3e3890> \\\hline
+
+geometric\_matrix & Function &  &  &  & result(gmean) & <ast.Function object at 0x14b57f3ea150> \\\hline
+
+harmonic\_vector & Function &  &  &  & result(hmean) & <ast.Function object at 0x14b57f3eaa50> \\\hline
+
+harmonic\_matrix & Function &  &  &  & result(hmean) & <ast.Function object at 0x14b57f3e6b90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{arithmetic\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ba910> \\\hline
+
+amean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3baad0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{arithmetic\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e3150> \\\hline
+
+amean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e33d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{geometric\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e3a10> \\\hline
+
+gmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e3b90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{geometric\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ea190> \\\hline
+
+gmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3ea410> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{harmonic\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ea990> \\\hline
+
+hmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3eac10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{harmonic\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e6b50> \\\hline
+
+hmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e69d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{HistogramPlot - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+histogram\_vector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f40e710> \\\hline
+
+histogram\_matrix & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f40eb10> \\\hline
+
+Plot & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f4061d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{histogram\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e6190> \\\hline
+
+i & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3e6d90> \\\hline
+
+s & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3e6d90> \\\hline
+
+n & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f3e6d90> \\\hline
+
+limit & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f40e250> \\\hline
+
+interval & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f40e250> \\\hline
+
+lowerbound & Scalar & 6 & character &  &  & <ast.Declaration object at 0x14b57f40e450> \\\hline
+
+upperbound & Scalar & 6 & character &  &  & <ast.Declaration object at 0x14b57f40e450> \\\hline
+
+filename & Scalar & 16 & character &  &  & <ast.Declaration object at 0x14b57f40e590> \\\hline
+
+group & Array & 16 & real & 2 & ['allocatable'] & <ast.Declaration object at 0x14b57f40e7d0> \\\hline
+
+p & Array & 8 & integer & 1 & ['allocatable'] & <ast.Declaration object at 0x14b57f40e9d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{histogram\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f40ecd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Plot - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Y & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f40ee90> \\\hline
+
+Z & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f406190> \\\hline
+
+X & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f406310> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f406350> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Postprocessor - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Stats\_vector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f406d50> \\\hline
+
+Stats\_matrix & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3f4590> \\\hline
+
+EIGENRECORD & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3f4b90> \\\hline
+
+EigenAnalysis & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3f1210> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{Stats\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f406c10> \\\hline
+
+M & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x14b57f406e90> \\\hline
+
+StdDev & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x14b57f406e90> \\\hline
+
+s & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f406fd0> \\\hline
+
+ssq & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f406fd0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f4250> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f4250> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{Stats\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3f45d0> \\\hline
+
+M & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x14b57f3f4890> \\\hline
+
+StdDev & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x14b57f3f4890> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EIGENRECORD - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3f4c10> \\\hline
+
+E & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3f4d50> \\\hline
+
+COND & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3f4d50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f4b50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EigenAnalysis - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+E & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3f1510> \\\hline
+
+COND & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3f1510> \\\hline
+
+IOstatus & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f1750> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f1750> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3f1750> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPTools - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Potential & Function &  &  &  & result(f) & <ast.Function object at 0x14b57f3f1f90> \\\hline
+
+zero\_ratio & Function &  &  &  & result(alpha) & <ast.Function object at 0x14b57f3e1550> \\\hline
+
+min\_ratio & Function &  &  &  & result(alpha) & <ast.Function object at 0x14b57f40a1d0> \\\hline
+
+Dual & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f40a810> \\\hline
+
+StdToCan & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3ff5d0> \\\hline
+
+Transform & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f3ffc50> \\\hline
+
+InvTransform & Function &  &  &  & result(x) & <ast.Function object at 0x14b57f3fca10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Potential - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3f1dd0> \\\hline
+
+x & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3f1dd0> \\\hline
+
+f & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3f1d90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{zero\_ratio}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e12d0> \\\hline
+
+c\_unit & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e1410> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e1690> \\\hline
+
+a & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e1690> \\\hline
+
+beta & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e13d0> \\\hline
+
+idx & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3e1910> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{min\_ratio}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e1d10> \\\hline
+
+c\_unit & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3e1e50> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e1fd0> \\\hline
+
+beta & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3e1f90> \\\hline
+
+idx & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f40a350> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Dual - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f40ab50> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f40ab50> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f40ab50> \\\hline
+
+A\_dual & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x14b57f40ad50> \\\hline
+
+b\_dual & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x14b57f40ad50> \\\hline
+
+c\_dual & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x14b57f40ad50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{StdToCan - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_std & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f409990> \\\hline
+
+b\_std & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f409990> \\\hline
+
+c\_std & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f409990> \\\hline
+
+A\_can & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x14b57f409fd0> \\\hline
+
+c\_can & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x14b57f409fd0> \\\hline
+
+a0 & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x14b57f409fd0> \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f402850> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f402850> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f402850> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ff4d0> \\\hline
+
+y0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ff4d0> \\\hline
+
+u0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ff4d0> \\\hline
+
+v0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3ff4d0> \\\hline
+
+lambda\_0 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f3ff4d0> \\\hline
+
+m & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3ff610> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3ff610> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3ff610> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3ff610> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Transform - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ffe10> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ffe10> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ffe10> \\\hline
+
+a0 & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3ffe10> \\\hline
+
+A\_can & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x14b57f3fff90> \\\hline
+
+c\_can & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x14b57f3fff90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{InvTransform - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x\_can & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3fc8d0> \\\hline
+
+x0 & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3fc8d0> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3fc850> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAOperators - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+DIAG & Function &  &  &  & result(D) & <ast.Function object at 0x14b57f3fa310> \\\hline
+
+ONES & Function &  &  &  & result(D) & <ast.Function object at 0x14b57f3fa5d0> \\\hline
+
+COLMULT & Function &  &  &  & result(cA) & <ast.Function object at 0x14b57f1e4050> \\\hline
+
+ADD & Function &  &  &  & result(a) & <ast.Function object at 0x14b57f1e47d0> \\\hline
+
+DOT & Function &  &  &  & result(bTc) & <ast.Function object at 0x14b57f1e4a10> \\\hline
+
+ENORM & Function &  &  &  & result(n) & <ast.Function object at 0x14b57f1e5450> \\\hline
+
+UPPER & Function &  &  &  & result(U) & <ast.Function object at 0x14b57f1e56d0> \\\hline
+
+LOWER & Function &  &  &  & result(L) & <ast.Function object at 0x14b57f1e5e10> \\\hline
+
+CholeskyDecomp & Function &  &  &  & result(L) & <ast.Function object at 0x14b57f1e7a50> \\\hline
+
+SPDLUD & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f1e9810> \\\hline
+
+ForSubstitution & Function &  &  &  & result(x) & <ast.Function object at 0x14b57f1ea0d0> \\\hline
+
+BackSubstitution & Function &  &  &  & result(x) & <ast.Function object at 0x14b57f1ea5d0> \\\hline
+
+GEMV & Function &  &  &  & result(Mv) & <ast.Function object at 0x14b57f1eacd0> \\\hline
+
+GEMM & Function &  &  &  & result(AB) & <ast.Function object at 0x14b57f1ec490> \\\hline
+
+TRANS & Function &  &  &  & result(AT) & <ast.Function object at 0x14b57f1ecd50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DIAG - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3fced0> \\\hline
+
+D & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3fcf10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f3fa090> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ONES - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f3fa950> \\\hline
+
+D & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f3faa50> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f3fac10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{COLMULT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3faf50> \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f3faf50> \\\hline
+
+cA & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e40d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e42d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ADD - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e4850> \\\hline
+
+a & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f1e4910> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e4a50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DOT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e4f50> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e4f50> \\\hline
+
+bTc & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f1e4f90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ENORM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+u & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1e52d0> \\\hline
+
+n & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f1e53d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{UPPER - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e5750> \\\hline
+
+U & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e58d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e5910> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LOWER - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e5ed0> \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e5fd0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e70d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{CholeskyDecomp - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e75d0> \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e7790> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e77d0> \\\hline
+
+summ & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f1e7b50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{SPDLUD - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1e7f50> \\\hline
+
+L & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x14b57f1e93d0> \\\hline
+
+U & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x14b57f1e93d0> \\\hline
+
+q & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e97d0> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e97d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e97d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1e97d0> \\\hline
+
+D & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1e9ad0> \\\hline
+
+Dia & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e9ad0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ForSubstitution - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1e9f10> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1e9f10> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1ea110> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1ea050> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{BackSubstitution - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+U & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1ea150> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1ea150> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1ea790> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1ea750> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GEMV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1ea910> \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1ea910> \\\hline
+
+Mv & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f1eae50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1eae10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GEMM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ec210> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ec210> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1ec650> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1eca10> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1eca10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{TRANS - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ecdd0> \\\hline
+
+AT & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1ecf90> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1ed290> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1ed290> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAPACKOperators - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+DOT & Function &  &  &  & result(uTv) & <ast.Function object at 0x14b57f1eda10> \\\hline
+
+ENORM & Function &  &  &  & result(NormV) & <ast.Function object at 0x14b57f1ede10> \\\hline
+
+DPOINV & Function &  &  &  & result(AINV) & <ast.Function object at 0x14b57f1ef290> \\\hline
+
+EIGEN & Function &  &  &  & result(E) & <ast.Function object at 0x14b57f1f2690> \\\hline
+
+LAGEMV & Function &  &  &  & result(AX) & <ast.Function object at 0x14b57f1f3490> \\\hline
+
+LAGEMM & Function &  &  &  & result(C) & <ast.Function object at 0x14b57f1f5110> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DOT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+SX & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ed910> \\\hline
+
+SY & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ed910> \\\hline
+
+uTv & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1ed810> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1edc10> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1edc10> \\\hline
+
+INCY & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1edc10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ENORM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+X & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1eded0> \\\hline
+
+NormV & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1edf10> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1ef190> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1ef190> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DPOINV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1ef4d0> \\\hline
+
+AINV & Array & 8 & real & 2 &  & <ast.Declaration object at 0x14b57f1ef450> \\\hline
+
+UPLO & Scalar &  & character &  &  & <ast.Declaration object at 0x14b57f1ef610> \\\hline
+
+N & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+LDA & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+IPIV & Array & 4 & integer & 1 &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+INFO & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1efe10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EIGEN - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 &  & <ast.Declaration object at 0x14b57f1ed390> \\\hline
+
+E & Array & 8 & real & 1 &  & <ast.Declaration object at 0x14b57f1f2250> \\\hline
+
+JOBZ & Scalar &  & character &  &  & <ast.Declaration object at 0x14b57f1f2310> \\\hline
+
+N & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1f2750> \\\hline
+
+LDA & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1f2750> \\\hline
+
+LWORK & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1f2750> \\\hline
+
+INFO & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f1f2750> \\\hline
+
+WORK & Array & 8 & real & 1 & ['allocatable'] & <ast.Declaration object at 0x14b57f1f2890> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAGEMV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f2510> \\\hline
+
+X & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f2510> \\\hline
+
+AX & Array & 8 & real & 1 &  & <ast.Declaration object at 0x14b57f1f2c50> \\\hline
+
+TRANS & Scalar &  & character &  &  & <ast.Declaration object at 0x14b57f1f2e90> \\\hline
+
+M & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f3550> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f3550> \\\hline
+
+LDA & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f3550> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f3550> \\\hline
+
+INCY & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f3550> \\\hline
+
+ALPHA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1f3750> \\\hline
+
+BETA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1f3750> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAGEMM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f3950> \\\hline
+
+B & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f3950> \\\hline
+
+C & Array & 8 & real & 2 &  & <ast.Declaration object at 0x14b57f1f3c90> \\\hline
+
+TRANSA & Scalar &  & character &  &  & <ast.Declaration object at 0x14b57f1f3e50> \\\hline
+
+M & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+K & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+LDA & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+LDB & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+LDC & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x14b57f1f5410> \\\hline
+
+ALPHA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1f5650> \\\hline
+
+BETA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x14b57f1f5650> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Augment - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+HAugment\_vv & Function &  &  &  & result(ab) & <ast.Function object at 0x14b57f1f5d10> \\\hline
+
+HAugment\_Mv & Function &  &  &  & result(Ab) & <ast.Function object at 0x14b57f1f7c50> \\\hline
+
+HAugment\_vM & Function &  &  &  & result(aB) & <ast.Function object at 0x14b57f1faa10> \\\hline
+
+HAugment\_MM & Function &  &  &  & result(AB) & <ast.Function object at 0x14b57f1fe310> \\\hline
+
+VAugment\_ss & Function &  &  &  & result(ab) & <ast.Function object at 0x14b57f200210> \\\hline
+
+VAugment\_sv & Function &  &  &  & result(sv) & <ast.Function object at 0x14b57f200b50> \\\hline
+
+VAugment\_vs & Function &  &  &  & result(vs) & <ast.Function object at 0x14b57f2035d0> \\\hline
+
+VAugment\_vv & Function &  &  &  & result(ab) & <ast.Function object at 0x14b57f206150> \\\hline
+
+VAugment\_Mv & Function &  &  &  & result(Ab\_T) & <ast.Function object at 0x14b57f2091d0> \\\hline
+
+VAugment\_vM & Function &  &  &  & result(a\_TB) & <ast.Function object at 0x14b57f209ed0> \\\hline
+
+VAugment\_MM & Function &  &  &  & result(AB) & <ast.Function object at 0x14b57f20de50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_vv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f5c50> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f5c50> \\\hline
+
+ab & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1f5bd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_Mv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f70d0> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1f70d0> \\\hline
+
+Ab & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1f76d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_vM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fa410> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fa410> \\\hline
+
+aB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1fa390> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_MM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fa810> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fa810> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f1fad50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_ss}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fef10> \\\hline
+
+b & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f1fef10> \\\hline
+
+ab & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f2000d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_sv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+s & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f200750> \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f200750> \\\hline
+
+sv & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f200850> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vs}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f203250> \\\hline
+
+s & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f203250> \\\hline
+
+vs & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f203050> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f203d10> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f203d10> \\\hline
+
+ab & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f203c90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_Mv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f206790> \\\hline
+
+b\_T & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f206790> \\\hline
+
+Ab\_T & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f206ad0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a\_T & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x14b57f209990> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f209990> \\\hline
+
+a\_TB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f209910> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_MM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f20d090> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x14b57f20d090> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f20d750> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GeoGebra - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+GGBInit & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f20f5d0> \\\hline
+
+GGBPlot & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f20de10> \\\hline
+
+GGBPlotSystem & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f213410> \\\hline
+
+GGBPlotPoint & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f2138d0> \\\hline
+
+GGBPlotVector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f216610> \\\hline
+
+GGBPlotPlane & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f216c90> \\\hline
+
+GGBLabel & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f216e10> \\\hline
+
+GGBCommand & Subroutine &  &  &  &  & <ast.Subroutine object at 0x14b57f218150> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBInit - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+X & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f20fb50> \\\hline
+
+Y & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f20fb50> \\\hline
+
+Z & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f20fb50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f20f410> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f20f410> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlot - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotSystem - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x14b57f20ff10> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f20ff10> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f213190> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x14b57f213150> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x14b57f213450> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x14b57f213050> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotPoint - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f2139d0> \\\hline
+
+label & Scalar & 10 & character &  &  & <ast.Declaration object at 0x14b57f213750> \\\hline
+
+color & Scalar & 6 & character &  &  & <ast.Declaration object at 0x14b57f213cd0> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x14b57f213e10> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x14b57f213f10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotVector - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f2162d0> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x14b57f216150> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x14b57f216490> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotPlane - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x14b57f216a90> \\\hline
+
+b & Scalar & 16 & real &  &  & <ast.Declaration object at 0x14b57f216a90> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x14b57f216ad0> \\\hline
+
+vstr & Scalar & 50 & character &  &  & <ast.Declaration object at 0x14b57f216990> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBLabel - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+label & Scalar & 10 & character &  &  & <ast.Declaration object at 0x14b57f216f50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBCommand - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+str & Scalar & 10 & character &  & ['intent(in)'] & <ast.Declaration object at 0x14b57f218210> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\end{document}\documentclass{report}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage[T1]{fontenc}
+
+\title{\bfseries Symbol Table - \textit{LPSolver\_st}}
+
+\begin{document}
+
+\maketitle\pagebreak
+
+\renewcommand{\arraystretch}{1.5}
+\addtolength{\textwidth}{3cm}
+
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : }  \textbf{\textit{global}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+testLPSolver & Main &  &  &  &  & <ast.Main object at 0x147ea2992e10> \\\hline
+
+ProbabilityDistribution & Module &  &  &  &  & <ast.Module object at 0x147ea2992f90> \\\hline
+
+ProbabilityGeneration & Module &  &  &  &  & <ast.Module object at 0x147ea2839550> \\\hline
+
+LPPGeneration & Module &  &  &  &  & <ast.Module object at 0x147ea2808ad0> \\\hline
+
+LinearProblemSolver & Module &  &  &  &  & <ast.Module object at 0x147ea28ff7d0> \\\hline
+
+Algorithm & Module &  &  &  &  & <ast.Module object at 0x147ea28f5950> \\\hline
+
+Statistics & Module &  &  &  &  & <ast.Module object at 0x147ea2905d50> \\\hline
+
+HistogramPlot & Module &  &  &  &  & <ast.Module object at 0x147ea2943350> \\\hline
+
+Postprocessor & Module &  &  &  &  & <ast.Module object at 0x147ea29393d0> \\\hline
+
+LPTools & Module &  &  &  &  & <ast.Module object at 0x147ea295e5d0> \\\hline
+
+LAOperators & Module &  &  &  &  & <ast.Module object at 0x147ea2952850> \\\hline
+
+LAPACKOperators & Module &  &  &  &  & <ast.Module object at 0x147ea273f250> \\\hline
+
+Augment & Module &  &  &  &  & <ast.Module object at 0x147ea2746790> \\\hline
+
+GeoGebra & Module &  &  &  &  & <ast.Module object at 0x147ea275d510> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{testLPSolver - }Main}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbabilityDistribution - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+UniformDist & Function &  &  &  & result(u) & <ast.Function object at 0x147ea28fe050> \\\hline
+
+NormalDist & Function &  &  &  & result(n) & <ast.Function object at 0x147ea28fe1d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{UniformDist - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2839cd0> \\\hline
+
+IA & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x147ea2839590> \\\hline
+
+IM & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x147ea2839590> \\\hline
+
+IQ & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x147ea2839590> \\\hline
+
+IR & Scalar & 8 & integer &  & ['parameter'] & <ast.Declaration object at 0x147ea2839590> \\\hline
+
+am & Scalar & 16 & real &  & ['save'] & <ast.Declaration object at 0x147ea2839390> \\\hline
+
+ix & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x147ea28fe550> \\\hline
+
+iy & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x147ea28fe550> \\\hline
+
+k & Scalar & 8 & integer &  & ['save'] & <ast.Declaration object at 0x147ea28fe550> \\\hline
+
+u & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2839190> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{NormalDist - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea28fee50> \\\hline
+
+PI & Scalar & 16 & real &  & ['parameter'] & <ast.Declaration object at 0x147ea28fe750> \\\hline
+
+u1 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea28fe990> \\\hline
+
+u2 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea28fe990> \\\hline
+
+n & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea28fec90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbabilityGeneration - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+ProbVecGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea29af050> \\\hline
+
+ProbMatGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea29afb10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbVecGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2808d50> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2808f10> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2808f10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2808fd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProbMatGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea29af350> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea29af990> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea29af990> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29afa90> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29afa90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPPGeneration - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+LPPGen & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea28ff3d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPPGen - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28ff6d0> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28ff6d0> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28ff6d0> \\\hline
+
+seed & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea28ff850> \\\hline
+
+count & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea28ff850> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28ff950> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28ff950> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LinearProblemSolver - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+CanonicalForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea28fff50> \\\hline
+
+EqualityForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea290c590> \\\hline
+
+StandardForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea29075d0> \\\hline
+
+LeastNegativeForm & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea291e290> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{CanonicalForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea290c390> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea290c390> \\\hline
+
+x\_opt & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea290c390> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea290c290> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea290c290> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EqualityForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_eq & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+b\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+c\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x\_eq & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+A\_can1 & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+c\_can1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x\_can1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x01 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+x\_opt1 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+lambda & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2907450> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2907390> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2907390> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{StandardForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+x\_opt & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+a0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28faf50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28fac50> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28fac50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LeastNegativeForm - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_ln & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+b\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+c\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+y0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x\_ln & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+A\_aug & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+b\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+c\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x0\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+A\_augcan & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+c\_augcan & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x\_augcan & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+A\_can & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+c\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f2d10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+opt & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+greater & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+num & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+feas & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+fail & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+ini\_feas & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea28f5910> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Algorithm - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+ProjectiveMethod & Function &  &  &  & result(x\_can) & <ast.Function object at 0x147ea2905f10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ProjectiveMethod - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea28f5c10> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea28f5c10> \\\hline
+
+x\_can & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea28f5ed0> \\\hline
+
+x\_p & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+f\_p & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+f & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+eps & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+x0\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+x\_aug & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29059d0> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+iter & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+iter\_limit & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+iter\_num & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+iterz & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2905e10> \\\hline
+
+Optimize & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea290a810> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Optimize - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x\_p & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea290a390> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea290a510> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+Ad & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+B & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+c\_p & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+c\_unit & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2934b90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Statistics - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+arithmetic\_vector & Function &  &  &  & result(amean) & <ast.Function object at 0x147ea2934550> \\\hline
+
+arithmetic\_matrix & Function &  &  &  & result(amean) & <ast.Function object at 0x147ea293e0d0> \\\hline
+
+geometric\_vector & Function &  &  &  & result(gmean) & <ast.Function object at 0x147ea293e850> \\\hline
+
+geometric\_matrix & Function &  &  &  & result(gmean) & <ast.Function object at 0x147ea2943110> \\\hline
+
+harmonic\_vector & Function &  &  &  & result(hmean) & <ast.Function object at 0x147ea2943a10> \\\hline
+
+harmonic\_matrix & Function &  &  &  & result(hmean) & <ast.Function object at 0x147ea2960310> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{arithmetic\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2934510> \\\hline
+
+amean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2934310> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{arithmetic\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea293e110> \\\hline
+
+amean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea293e390> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{geometric\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea293e9d0> \\\hline
+
+gmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea293eb50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{geometric\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2943150> \\\hline
+
+gmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea29433d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{harmonic\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2943950> \\\hline
+
+hmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2943bd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{harmonic\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2960350> \\\hline
+
+hmean & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea29605d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{HistogramPlot - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+histogram\_vector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea29366d0> \\\hline
+
+histogram\_matrix & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2936ad0> \\\hline
+
+Plot & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2939190> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{histogram\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2960d90> \\\hline
+
+i & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2960b50> \\\hline
+
+s & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2960b50> \\\hline
+
+n & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2960b50> \\\hline
+
+limit & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2936210> \\\hline
+
+interval & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2936210> \\\hline
+
+lowerbound & Scalar & 6 & character &  &  & <ast.Declaration object at 0x147ea2936410> \\\hline
+
+upperbound & Scalar & 6 & character &  &  & <ast.Declaration object at 0x147ea2936410> \\\hline
+
+filename & Scalar & 16 & character &  &  & <ast.Declaration object at 0x147ea2936550> \\\hline
+
+group & Array & 16 & real & 2 & ['allocatable'] & <ast.Declaration object at 0x147ea2936790> \\\hline
+
+p & Array & 8 & integer & 1 & ['allocatable'] & <ast.Declaration object at 0x147ea2936990> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{histogram\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2936c90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Plot - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Y & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2936fd0> \\\hline
+
+Z & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2939150> \\\hline
+
+X & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29392d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2939310> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Postprocessor - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Stats\_vector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2939dd0> \\\hline
+
+Stats\_matrix & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea295e550> \\\hline
+
+EIGENRECORD & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea295eb50> \\\hline
+
+EigenAnalysis & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea29481d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{Stats\_vector}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+vector & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2939bd0> \\\hline
+
+M & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x147ea2939e50> \\\hline
+
+StdDev & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x147ea2939e50> \\\hline
+
+s & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2939f50> \\\hline
+
+ssq & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2939f50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea295e210> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea295e210> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{Stats\_matrix}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Matrix & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea295e590> \\\hline
+
+M & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x147ea295e850> \\\hline
+
+StdDev & Scalar & 16 & real &  & ['intent(out)'] & <ast.Declaration object at 0x147ea295e850> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EIGENRECORD - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea295ebd0> \\\hline
+
+E & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea295ef50> \\\hline
+
+COND & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea295ef50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea295ecd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EigenAnalysis - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+E & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea29484d0> \\\hline
+
+COND & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea29484d0> \\\hline
+
+IOstatus & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2948710> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2948710> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2948710> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LPTools - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+Potential & Function &  &  &  & result(f) & <ast.Function object at 0x147ea2948f50> \\\hline
+
+zero\_ratio & Function &  &  &  & result(alpha) & <ast.Function object at 0x147ea2961510> \\\hline
+
+min\_ratio & Function &  &  &  & result(alpha) & <ast.Function object at 0x147ea295b190> \\\hline
+
+Dual & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea295b7d0> \\\hline
+
+StdToCan & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2952590> \\\hline
+
+Transform & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2952c10> \\\hline
+
+InvTransform & Function &  &  &  & result(x) & <ast.Function object at 0x147ea29449d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Potential - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2948d90> \\\hline
+
+x & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2948d90> \\\hline
+
+f & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2948d50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{zero\_ratio}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2961290> \\\hline
+
+c\_unit & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea29613d0> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2961650> \\\hline
+
+a & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2961650> \\\hline
+
+beta & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2961390> \\\hline
+
+idx & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29618d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{min\_ratio}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2961cd0> \\\hline
+
+c\_unit & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2961e10> \\\hline
+
+alpha & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2961fd0> \\\hline
+
+beta & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2961f90> \\\hline
+
+idx & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea295b310> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Dual - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea295bb10> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea295bb10> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea295bb10> \\\hline
+
+A\_dual & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x147ea295bd10> \\\hline
+
+b\_dual & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x147ea295bd10> \\\hline
+
+c\_dual & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x147ea295bd10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{StdToCan - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A\_std & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea295a950> \\\hline
+
+b\_std & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea295a950> \\\hline
+
+c\_std & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea295a950> \\\hline
+
+A\_can & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x147ea295af90> \\\hline
+
+c\_can & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x147ea295af90> \\\hline
+
+a0 & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x147ea295af90> \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2956bd0> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2956bd0> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2956bd0> \\\hline
+
+x0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2952490> \\\hline
+
+y0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2952490> \\\hline
+
+u0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2952490> \\\hline
+
+v0 & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2952490> \\\hline
+
+lambda\_0 & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2952490> \\\hline
+
+m & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29525d0> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29525d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29525d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea29525d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Transform - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2952dd0> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2952dd0> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2952dd0> \\\hline
+
+a0 & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2952dd0> \\\hline
+
+A\_can & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x147ea2952f50> \\\hline
+
+c\_can & Array & 16 & real & 1 & ['intent(out)'] & <ast.Declaration object at 0x147ea2952f50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{InvTransform - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x\_can & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2944890> \\\hline
+
+x0 & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2944890> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2944810> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAOperators - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+DIAG & Function &  &  &  & result(D) & <ast.Function object at 0x147ea27352d0> \\\hline
+
+ONES & Function &  &  &  & result(D) & <ast.Function object at 0x147ea2735590> \\\hline
+
+COLMULT & Function &  &  &  & result(cA) & <ast.Function object at 0x147ea2737090> \\\hline
+
+ADD & Function &  &  &  & result(a) & <ast.Function object at 0x147ea2737790> \\\hline
+
+DOT & Function &  &  &  & result(bTc) & <ast.Function object at 0x147ea27379d0> \\\hline
+
+ENORM & Function &  &  &  & result(n) & <ast.Function object at 0x147ea2738410> \\\hline
+
+UPPER & Function &  &  &  & result(U) & <ast.Function object at 0x147ea2738690> \\\hline
+
+LOWER & Function &  &  &  & result(L) & <ast.Function object at 0x147ea2738e10> \\\hline
+
+CholeskyDecomp & Function &  &  &  & result(L) & <ast.Function object at 0x147ea273aa10> \\\hline
+
+SPDLUD & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea273c7d0> \\\hline
+
+ForSubstitution & Function &  &  &  & result(x) & <ast.Function object at 0x147ea273d1d0> \\\hline
+
+BackSubstitution & Function &  &  &  & result(x) & <ast.Function object at 0x147ea273d590> \\\hline
+
+GEMV & Function &  &  &  & result(Mv) & <ast.Function object at 0x147ea273dc90> \\\hline
+
+GEMM & Function &  &  &  & result(AB) & <ast.Function object at 0x147ea273f450> \\\hline
+
+TRANS & Function &  &  &  & result(AT) & <ast.Function object at 0x147ea273fd10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DIAG - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+x & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2944e90> \\\hline
+
+D & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2944f90> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2944f50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ONES - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+n & Scalar & 4 & integer &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2735910> \\\hline
+
+D & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2735a10> \\\hline
+
+e & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2735bd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{COLMULT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2735f10> \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2735f10> \\\hline
+
+cA & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2737050> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2737290> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ADD - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2737810> \\\hline
+
+a & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea27378d0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2737a10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DOT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2737f10> \\\hline
+
+c & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2737f10> \\\hline
+
+bTc & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2737f90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ENORM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+u & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2738290> \\\hline
+
+n & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea2738390> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{UPPER - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2738710> \\\hline
+
+U & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2738890> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea27388d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LOWER - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2738e90> \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2738f90> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273a090> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{CholeskyDecomp - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273a590> \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273a750> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273a790> \\\hline
+
+summ & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea273ab10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{SPDLUD - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea273af10> \\\hline
+
+L & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x147ea273c390> \\\hline
+
+U & Array & 16 & real & 2 & ['intent(out)'] & <ast.Declaration object at 0x147ea273c390> \\\hline
+
+q & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273c790> \\\hline
+
+n & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273c790> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273c790> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273c790> \\\hline
+
+D & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273ca90> \\\hline
+
+Dia & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273ca90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ForSubstitution - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+L & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273ced0> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273ced0> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273d190> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273d0d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{BackSubstitution - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+U & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273d110> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273d110> \\\hline
+
+x & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273d750> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273d710> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GEMV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+M & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273d8d0> \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273d8d0> \\\hline
+
+Mv & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea273de10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273ddd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GEMM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea273f150> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea273f150> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273f610> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273f9d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea273f9d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{TRANS - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea273fd90> \\\hline
+
+AT & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea273ff50> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2740250> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2740250> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAPACKOperators - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+DOT & Function &  &  &  & result(uTv) & <ast.Function object at 0x147ea27409d0> \\\hline
+
+ENORM & Function &  &  &  & result(NormV) & <ast.Function object at 0x147ea2740c50> \\\hline
+
+DPOINV & Function &  &  &  & result(AINV) & <ast.Function object at 0x147ea2742210> \\\hline
+
+EIGEN & Function &  &  &  & result(E) & <ast.Function object at 0x147ea2745650> \\\hline
+
+LAGEMV & Function &  &  &  & result(AX) & <ast.Function object at 0x147ea2746450> \\\hline
+
+LAGEMM & Function &  &  &  & result(C) & <ast.Function object at 0x147ea27490d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DOT - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+SX & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea27408d0> \\\hline
+
+SY & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea27408d0> \\\hline
+
+uTv & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea27407d0> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2740bd0> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2740bd0> \\\hline
+
+INCY & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2740bd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{ENORM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+X & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2740e90> \\\hline
+
+NormV & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea2740f50> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2742150> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2742150> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{DPOINV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2742490> \\\hline
+
+AINV & Array & 8 & real & 2 &  & <ast.Declaration object at 0x147ea2742410> \\\hline
+
+UPLO & Scalar &  & character &  &  & <ast.Declaration object at 0x147ea27425d0> \\\hline
+
+N & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+LDA & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+IPIV & Array & 4 & integer & 1 &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+INFO & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2742dd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{EIGEN - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 &  & <ast.Declaration object at 0x147ea2742fd0> \\\hline
+
+E & Array & 8 & real & 1 &  & <ast.Declaration object at 0x147ea2745210> \\\hline
+
+JOBZ & Scalar &  & character &  &  & <ast.Declaration object at 0x147ea27452d0> \\\hline
+
+N & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2745710> \\\hline
+
+LDA & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2745710> \\\hline
+
+LWORK & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2745710> \\\hline
+
+INFO & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2745710> \\\hline
+
+WORK & Array & 8 & real & 1 & ['allocatable'] & <ast.Declaration object at 0x147ea2745850> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAGEMV - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea27454d0> \\\hline
+
+X & Array & 8 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea27454d0> \\\hline
+
+AX & Array & 8 & real & 1 &  & <ast.Declaration object at 0x147ea2745c10> \\\hline
+
+TRANS & Scalar &  & character &  &  & <ast.Declaration object at 0x147ea2745fd0> \\\hline
+
+M & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2746510> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2746510> \\\hline
+
+LDA & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2746510> \\\hline
+
+INCX & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2746510> \\\hline
+
+INCY & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea2746510> \\\hline
+
+ALPHA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea2746710> \\\hline
+
+BETA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea2746710> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{LAGEMM - }Function}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2746910> \\\hline
+
+B & Array & 8 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2746910> \\\hline
+
+C & Array & 8 & real & 2 &  & <ast.Declaration object at 0x147ea2746c50> \\\hline
+
+TRANSA & Scalar &  & character &  &  & <ast.Declaration object at 0x147ea2746f90> \\\hline
+
+M & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+N & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+K & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+LDA & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+LDB & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+LDC & Scalar & 8 & integer &  &  & <ast.Declaration object at 0x147ea27493d0> \\\hline
+
+ALPHA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea2749610> \\\hline
+
+BETA & Scalar & 8 & real &  &  & <ast.Declaration object at 0x147ea2749610> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{Augment - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+HAugment\_vv & Function &  &  &  & result(ab) & <ast.Function object at 0x147ea2749cd0> \\\hline
+
+HAugment\_Mv & Function &  &  &  & result(Ab) & <ast.Function object at 0x147ea274bc10> \\\hline
+
+HAugment\_vM & Function &  &  &  & result(aB) & <ast.Function object at 0x147ea274e9d0> \\\hline
+
+HAugment\_MM & Function &  &  &  & result(AB) & <ast.Function object at 0x147ea27522d0> \\\hline
+
+VAugment\_ss & Function &  &  &  & result(ab) & <ast.Function object at 0x147ea27541d0> \\\hline
+
+VAugment\_sv & Function &  &  &  & result(sv) & <ast.Function object at 0x147ea2754b10> \\\hline
+
+VAugment\_vs & Function &  &  &  & result(vs) & <ast.Function object at 0x147ea2757590> \\\hline
+
+VAugment\_vv & Function &  &  &  & result(ab) & <ast.Function object at 0x147ea275a110> \\\hline
+
+VAugment\_Mv & Function &  &  &  & result(Ab\_T) & <ast.Function object at 0x147ea275d190> \\\hline
+
+VAugment\_vM & Function &  &  &  & result(a\_TB) & <ast.Function object at 0x147ea275de90> \\\hline
+
+VAugment\_MM & Function &  &  &  & result(AB) & <ast.Function object at 0x147ea2760e10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_vv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2749c10> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2749c10> \\\hline
+
+ab & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2749b90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_Mv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea274b290> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea274b290> \\\hline
+
+Ab & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea274b690> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_vM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea274e3d0> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea274e3d0> \\\hline
+
+aB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea274e350> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{HAugment\_MM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea274e7d0> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea274e7d0> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea274ef50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_ss}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2752ed0> \\\hline
+
+b & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2752ed0> \\\hline
+
+ab & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2752e50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_sv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+s & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2754710> \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2754710> \\\hline
+
+sv & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2754810> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vs}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2757210> \\\hline
+
+s & Scalar & 16 & real &  & ['intent(in)'] & <ast.Declaration object at 0x147ea2757210> \\\hline
+
+vs & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2757050> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2757cd0> \\\hline
+
+b & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea2757cd0> \\\hline
+
+ab & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2757c50> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_Mv}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea275a750> \\\hline
+
+b\_T & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea275a750> \\\hline
+
+Ab\_T & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea275aa90> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_vM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+a\_T & Array & 16 & real & 1 & ['intent(in)'] & <ast.Declaration object at 0x147ea275d950> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea275d950> \\\hline
+
+a\_TB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea275d8d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope} -  \textbf{\textit{VAugment\_MM}}} \\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2760210> \\\hline
+
+B & Array & 16 & real & 2 & ['intent(in)'] & <ast.Declaration object at 0x147ea2760210> \\\hline
+
+AB & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2760710> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GeoGebra - }Module}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+GGBInit & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2763590> \\\hline
+
+GGBPlot & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2760dd0> \\\hline
+
+GGBPlotSystem & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea27663d0> \\\hline
+
+GGBPlotPoint & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea2766d50> \\\hline
+
+GGBPlotVector & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea276a5d0> \\\hline
+
+GGBPlotPlane & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea276ac50> \\\hline
+
+GGBLabel & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea276add0> \\\hline
+
+GGBCommand & Subroutine &  &  &  &  & <ast.Subroutine object at 0x147ea276c110> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBInit - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+X & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2763b10> \\\hline
+
+Y & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2763b10> \\\hline
+
+Z & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2763b10> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea27633d0> \\\hline
+
+j & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea27633d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlot - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotSystem - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+A & Array & 16 & real & 2 &  & <ast.Declaration object at 0x147ea2763ed0> \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2763ed0> \\\hline
+
+b & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2766150> \\\hline
+
+i & Scalar & 4 & integer &  &  & <ast.Declaration object at 0x147ea2766090> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x147ea2766410> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x147ea27660d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotPoint - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea2766990> \\\hline
+
+label & Scalar & 10 & character &  &  & <ast.Declaration object at 0x147ea2766710> \\\hline
+
+color & Scalar & 6 & character &  &  & <ast.Declaration object at 0x147ea2766c90> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x147ea2766dd0> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x147ea2766cd0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotVector - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+v & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea276a290> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x147ea276a110> \\\hline
+
+vstr & Scalar & 100 & character &  &  & <ast.Declaration object at 0x147ea276a450> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBPlotPlane - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+c & Array & 16 & real & 1 &  & <ast.Declaration object at 0x147ea276aa50> \\\hline
+
+b & Scalar & 16 & real &  &  & <ast.Declaration object at 0x147ea276aa50> \\\hline
+
+str & Array & 10 & character & 1 &  & <ast.Declaration object at 0x147ea276aa90> \\\hline
+
+vstr & Scalar & 50 & character &  &  & <ast.Declaration object at 0x147ea276a950> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBLabel - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+label & Scalar & 10 & character &  &  & <ast.Declaration object at 0x147ea276af10> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\begin{center}
+\begin{longtable}{|p{3.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}|p{2cm}|p{4cm}| }
+\hline
+\multicolumn{7}{|c|}{\textbf{Scope : \qquad}  \textbf{\textit{GGBCommand - }Subroutine}}\\ 
+\hline
+\textbf{Id} & \textbf{type} & \textbf{precision} & \textbf{Dtype} & \textbf{ndim} & \textbf{Attributes} & \textbf{ref} \\\hline
+
+str & Scalar & 10 & character &  & ['intent(in)'] & <ast.Declaration object at 0x147ea276c1d0> \\\hline
+
+\end{longtable}
+\end{center}
+
+ \vspace{1cm}
+
+\end{document}
